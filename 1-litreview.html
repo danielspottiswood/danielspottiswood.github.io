@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Literature Review | Modelling Altcoin Price Variation with Sentiment Based Predictors</title>
+  <meta name="description" content="Chapter 1 Literature Review | Modelling Altcoin Price Variation with Sentiment Based Predictors" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Literature Review | Modelling Altcoin Price Variation with Sentiment Based Predictors" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Literature Review | Modelling Altcoin Price Variation with Sentiment Based Predictors" />
+  
+  
+  
+
+<meta name="author" content="Daniel Spottiswood" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="2-ref-labels.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="1-litreview.html"><a href="1-litreview.html"><i class="fa fa-check"></i><b>1</b> Literature Review</a></li>
+<li class="chapter" data-level="2" data-path="2-ref-labels.html"><a href="2-ref-labels.html"><i class="fa fa-check"></i><b>2</b> Tables, Graphics, References, and Labels</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-ref-labels.html"><a href="2-ref-labels.html#tables"><i class="fa fa-check"></i><b>2.1</b> Tables</a></li>
+<li class="chapter" data-level="2.2" data-path="2-ref-labels.html"><a href="2-ref-labels.html#figures"><i class="fa fa-check"></i><b>2.2</b> Figures</a></li>
+<li class="chapter" data-level="2.3" data-path="2-ref-labels.html"><a href="2-ref-labels.html#footnotes-and-endnotes"><i class="fa fa-check"></i><b>2.3</b> Footnotes and Endnotes</a></li>
+<li class="chapter" data-level="2.4" data-path="2-ref-labels.html"><a href="2-ref-labels.html#bibliographies"><i class="fa fa-check"></i><b>2.4</b> Bibliographies</a></li>
+<li class="chapter" data-level="2.5" data-path="2-ref-labels.html"><a href="2-ref-labels.html#anything-else"><i class="fa fa-check"></i><b>2.5</b> Anything else?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-organization.html"><a href="3-organization.html"><i class="fa fa-check"></i><b>3</b> Organization</a></li>
+<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-the-first-appendix.html"><a href="A-the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
+<li class="chapter" data-level="B" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Modelling Altcoin Price Variation with Sentiment Based Predictors</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="litreview" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Literature Review</h1>
+<p>Early work demonstrated the predictive power of twitter sentiment on large cap stocks(Rao et al., Oliveira eta al.). Oliveira et al. used a Kalman filter to combine twitter sentiment with longer term popular survey sentiment indicators.</p>
+<p>Recently this has extended into cryptocurrency, arguably a much better application, with academic research demonstrating the predictive power of Twitter sentiment and Wikipedia and Google search volume on cryptocurrency prices. Garcia and Schweitzer provided proof of concept using Twitter sentiment and volume to predict Bitcoin prices. They made additional use of technical market features and applied a multi-dimensional model of vector autoregression to achieve a Sharpe ratio of 1.77. They found that higher polarization was correlated with rises in Bitcoin.</p>
+<p>Ray Li et al. demonstrated the effectiveness of Twitter sentiment in predicting the altcoin, Zclassic. They determined that 3 hours was the timeframe over which sentiment is baked into the price, and after extensive cross validation they had the most success using extreme gradient boosting.</p>
+<p>Kim et al. displayed a similar effect with user comments on relevant cryptocurrency online communities, displaying predictive power on both price and volume for several of the largest cryptocurrencies. They utilized sets of keywords to determine relatedness to certain concepts in addition to the direction of sentiment.</p>
+<p>ElBahrawya et al. displayed significant theoretical returns on a Wikipedia based trading strategy. Kristoufek paired the Wikipedia data with Google trends to develop a multi feature trading strategy using vector autoregression and vector error-correction. He demonstrated that when prices are high increased interest tends to push prices higher, and vice-versa. This behaviour may explain both the high volatility and the frequencies of bubble’s in the crypto space. This work was continued by Alexander Dickerson who used a set of wikipedia and google search frequencies to build trading strategies. While they appear to be extremely profitable, they are tested throughout the bitcoin boom and are not able to adequately predict the subsequent crash. As the cryptocurrency space has experienced many long term swings, it is important that these algorithms are robust to novel changes in the dynamics of the market.</p>
+<p>Outside of the sentiment/social information space, Wei demonstrated success using solely technical market information and an LSTM neural net. Using a sliding window transformation, he exhibited profits while trading on a daily timescale producing an F1 score of almost 60% when making binary predictions.</p>
+<p>It is important to note that while all of this proof of concept research has demonstrated significant profits, few have taken into account fees or bid ask spreads. It is unclear whether these strategies are profitable if implemented. The combination of transaction fees and spreads can be in the range of 20 to 100 basis points, therefore, these strategies would require a significant edge per trade.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="2-ref-labels.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

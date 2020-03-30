@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Methodology | Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors</title>
+  <meta name="description" content="Chapter 2 Methodology | Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Methodology | Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Methodology | Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors" />
+  
+  
+  
+
+<meta name="author" content="Daniel Spottiswood" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="1-data.html"/>
+<link rel="next" href="3-results.html"/>
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="literature-review.html"><a href="literature-review.html"><i class="fa fa-check"></i>Literature Review</a></li>
+<li class="chapter" data-level="1" data-path="1-data.html"><a href="1-data.html"><i class="fa fa-check"></i><b>1</b> Data</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-data.html"><a href="1-data.html#twitter"><i class="fa fa-check"></i><b>1.1</b> Twitter</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="1-data.html"><a href="1-data.html#tweet-removal"><i class="fa fa-check"></i><b>1.1.1</b> Tweet Removal</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-data.html"><a href="1-data.html#sentiment-analysis"><i class="fa fa-check"></i><b>1.1.2</b> Sentiment Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="1-data.html"><a href="1-data.html#google-search-volume"><i class="fa fa-check"></i><b>1.2</b> Google Search Volume</a></li>
+<li class="chapter" data-level="1.3" data-path="1-data.html"><a href="1-data.html#price-and-volume"><i class="fa fa-check"></i><b>1.3</b> Price and Volume</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-method.html"><a href="2-method.html"><i class="fa fa-check"></i><b>2</b> Methodology</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-method.html"><a href="2-method.html#log-returns"><i class="fa fa-check"></i><b>2.1</b> Log Returns</a></li>
+<li class="chapter" data-level="2.2" data-path="2-method.html"><a href="2-method.html#xgboost"><i class="fa fa-check"></i><b>2.2</b> XGBoost</a></li>
+<li class="chapter" data-level="2.3" data-path="2-method.html"><a href="2-method.html#long-short-term-memory"><i class="fa fa-check"></i><b>2.3</b> Long Short-Term Memory</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-method.html"><a href="2-method.html#layers"><i class="fa fa-check"></i><b>2.3.1</b> Layers</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-method.html"><a href="2-method.html#dropout"><i class="fa fa-check"></i><b>2.3.2</b> Dropout</a></li>
+<li class="chapter" data-level="2.3.3" data-path="2-method.html"><a href="2-method.html#preprocessing"><i class="fa fa-check"></i><b>2.3.3</b> Preprocessing</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-results.html"><a href="3-results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-results.html"><a href="3-results.html#trading-strategies"><i class="fa fa-check"></i><b>3.1</b> Trading Strategies</a></li>
+<li class="chapter" data-level="3.2" data-path="3-results.html"><a href="3-results.html#performance"><i class="fa fa-check"></i><b>3.2</b> Performance</a></li>
+<li class="chapter" data-level="3.3" data-path="3-results.html"><a href="3-results.html#performance-net-fees"><i class="fa fa-check"></i><b>3.3</b> Performance Net Fees</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i>Discussion</a><ul>
+<li class="chapter" data-level="3.4" data-path="discussion.html"><a href="discussion.html#limitations"><i class="fa fa-check"></i><b>3.4</b> Limitations</a></li>
+<li class="chapter" data-level="3.5" data-path="discussion.html"><a href="discussion.html#conclusion"><i class="fa fa-check"></i><b>3.5</b> Conclusion</a></li>
+<li class="chapter" data-level="3.6" data-path="discussion.html"><a href="discussion.html#future-work"><i class="fa fa-check"></i><b>3.6</b> Future Work</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-appendix-a.html"><a href="A-appendix-a.html"><i class="fa fa-check"></i><b>A</b> Appendix A</a><ul>
+<li class="chapter" data-level="A.1" data-path="A-appendix-a.html"><a href="A-appendix-a.html#model-features"><i class="fa fa-check"></i><b>A.1</b> Model Features</a></li>
+<li class="chapter" data-level="A.2" data-path="A-appendix-a.html"><a href="A-appendix-a.html#qq-plot-of-log-returns"><i class="fa fa-check"></i><b>A.2</b> QQ Plot of Log Returns</a></li>
+<li class="chapter" data-level="A.3" data-path="A-appendix-a.html"><a href="A-appendix-a.html#returns-net-fees"><i class="fa fa-check"></i><b>A.3</b> Returns Net Fees</a></li>
+<li class="chapter" data-level="A.4" data-path="A-appendix-a.html"><a href="A-appendix-a.html#correlations"><i class="fa fa-check"></i><b>A.4</b> Correlations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="method" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Methodology</h1>
+<div id="log-returns" class="section level2">
+<h2><span class="header-section-number">2.1</span> Log Returns</h2>
+<p>I regress on log returns with a specified lag of 4 hours that was determined in the validation phase. This is not necessarily equivalent to the time it takes for the full effect of the sentiment to be realized, but may be an optimization of the tradeoff between signal and noise.</p>
+<span class="math display" id="eq:5">\[\begin{align}
+  log \:  return_i = log(\frac{p_{(i)}}{p_{(i-lag)}}) \tag{2.1} \\ 
+\end{align}\]</span>
+<p>This provides multiple advantages over price or raw returns <span class="citation">(“Why log returns,” 2012)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Under the assumption that prices follow a log normal distribution than log returns are normally distributed</li>
+<li>When returns are small log-returns are close in value</li>
+<li>Compound returns are normally distributed as the sum of normally distributed log returns</li>
+</ol>
+<p>The distribution of log returns for Zcash is shown in Figure <a href="2-method.html#fig:logrets">2.1</a>. It should be noted that log returns do not fully adhere to a normal distribution due to the frequent multiple standard deviation occurences<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:logrets"></span>
+<img src="thesis_files/figure-html/logrets-1.png" alt="Distribution of Log Returns" width="672" />
+<p class="caption">
+Figure 2.1: Distribution of Log Returns
+</p>
+</div>
+</div>
+<div id="xgboost" class="section level2">
+<h2><span class="header-section-number">2.2</span> XGBoost</h2>
+<p>Extreme Gradient Boosted Trees, XGBoost, is a decision tree based ensemble learning method that employs boosting to efficiently yield high accuracy predictions. Tree ensemble methods aggregate the predictions of weak decision trees constantly updating residuals to improve predictions. Assuming K regression trees, our prediction for point <span class="math inline">\(y_i\)</span> is the sum of the feature set <span class="math inline">\(\textbf{x}_i\)</span> regressed on each individual tree <span class="math inline">\(f_k\)</span>.</p>
+<span class="math display" id="eq:1">\[\begin{align}
+  \hat{y_i} = \phi(\textbf{x}_i) = \sum_{k=1}^{K} f_k(\textbf{x}_i), \; \; f_k \in F \tag{1.1} \\ 
+\end{align}\]</span>
+<p>We minimize the following objective function where <span class="math inline">\(\Omega\)</span> is a regularization term that penalizes more complex models. <span class="math inline">\(T\)</span> is the number of leaves and w is the coefficient at each node. In my model <span class="math inline">\(l\)</span> is taken to be the mean squared error.</p>
+<span class="math display" id="eq:3" id="eq:2">\[\begin{align}
+  L(\phi) &amp;= \sum_{i}^{} l(\hat{y}_i, y_i) + \sum_{k}^{} \Omega(f_k) \tag{2.2} \\ 
+  \Omega(f) &amp;= \gamma T +1/2 \lambda \| w \|\tag{2.3} \\ 
+\end{align}\]</span>
+<p>The model is trained in an iterative manner. If we let <span class="math inline">\(\hat{y}_i^(t)\)</span> be the prediction for point <span class="math inline">\(y_i\)</span> at the <span class="math inline">\(t\)</span> iteration than we design <span class="math inline">\(f_t\)</span> to minimize the following function.</p>
+<span class="math display" id="eq:4">\[\begin{align}
+  L(\phi) = \sum_{i}^{n} [l(\hat{y}_i^{(t-1)}) + f_t(\textbf{x}_i), y_i)] + \Omega(f_t) \tag{2.4} \\ 
+\end{align}\]</span>
+<p>To achieve this I employ the following algorithm designed by Chen and Guestrin <span class="citation">(2016)</span>.</p>
+<div class="figure" style="text-align: center">
+<img src="figure/xgboost_algorithm.png" alt=" "  />
+<p class="caption">
+</p>
+</div>
+</div>
+<div id="long-short-term-memory" class="section level2">
+<h2><span class="header-section-number">2.3</span> Long Short-Term Memory</h2>
+<p>Long Short-Term Memory is a type of recurrent neural network that due to the specific architecture is able to better discern longer term patterns, avoiding the vanishing gradient problem<span class="citation">(Hochreiter &amp; Schmidhuber, 1997)</span>. It has been used in many contexts, making notable gains in speech recognition, language translation, and general time series prediction<span class="citation">(Beaufays, 2015)</span>.</p>
+<p>The basic architecture of a memory cell in an LSTM network consists of an input gate, forget gate, cell state, and output gate. The input gate <span class="math inline">\(I_t\)</span>, forget gate <span class="math inline">\(F_t\)</span>, and output gate <span class="math inline">\(O_t\)</span> for memory cell <span class="math inline">\(t\)</span> are linear combinations of the previous hidden state <span class="math inline">\(H_{t-1}\)</span> and current input <span class="math inline">\(X_t\)</span> passed through the sigmoid function. I denote the weight vectors as <span class="math inline">\(U\)</span> and <span class="math inline">\(W\)</span> and <span class="math inline">\(\odot\)</span> and <span class="math inline">\(+\)</span> denote elementwise multiplication and addition.</p>
+<span class="math display" id="eq:8" id="eq:7" id="eq:6">\[\begin{align}
+  I_t &amp;= \sigma(X_t\odot W_i + H_{t-1}\odot U_i) \tag{2.5} \\ 
+  F_t &amp;= \sigma(X_t\odot W_f + H_{t-1}\odot U_f) \tag{2.6} \\ 
+  O_t &amp;= \sigma(X_t\odot W_o + H_{t-1}\odot U_o) \tag{2.7} \\ 
+\end{align}\]</span>
+<p>The cell state <span class="math inline">\(C_t\)</span> is then a combination of the previous cell state filtered by the forget gate and the input gate, which determines the values to be updated, elementwise multiplied by another linear combination of the hidden state and current input scaled by the tanh function<span class="citation">(Sanjeevi, 2018)</span>.</p>
+<span class="math display" id="eq:10" id="eq:9">\[\begin{align}
+  c_t &amp;= \tanh(X_t\odot W_c + H_{t-1}\odot U_c) \tag{2.8} \\ 
+  C_t &amp;= \sigma(C_{t-1}\odot F_t + I_t\odot c_t) \tag{2.9} \\ 
+\end{align}\]</span>
+<p>The hidden state is the current state scaled by the tanh function weighted by the output gate.</p>
+<span class="math display" id="eq:11">\[\begin{align}
+  H_t = \tanh(C_t)\odot O_t \tag{2.10} \\ 
+\end{align}\]</span>
+<div id="layers" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Layers</h3>
+<p>One challenge is determining the optimal number of hidden neurons and hidden layers to avoid overfitting while still capturing potentially complex interactions. From Jeff Heaton, one hidden layer can “approximate any function that contains a continuous mapping from one finite space to another”<span class="citation">(2008)</span>. While I also tested using bidirectional layers and multiple hidden layers, I achieved the greatest accuracy through a single hidden layer.</p>
+</div>
+<div id="dropout" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Dropout</h3>
+<p>Dropout is a common technique to reduce overfitting and make individual hidden neurons more robust. Dropout refers to the random dropping of individual neurons in the training phase. In an LSTM network, this can take many different forms. After testing, I determined a 20 percent recurrent dropout in the LSTM layer combined with a 40 percent dropout layer was the most effective. Recurrent dropout in the context of LSTM refers to dropping <span class="math inline">\(d\)</span> during the update of the current state<span class="citation">(G, 2018)</span>.</p>
+<span class="math display" id="eq:12">\[\begin{align}
+  C_t &amp;= \sigma(C_{t-1}\odot F_t + I_t\odot d(c_t)) \tag{2.11} \\ 
+\end{align}\]</span>
+<p>I then added the additional, stronger dropout layer on top of the LSTM layer. I thus avoided a common issue in LSTM dropout in which important past information is dropped, reducing the ability of the model to identify long term patterns.</p>
+</div>
+<div id="preprocessing" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Preprocessing</h3>
+<p>Unlike tree based models which are insensitive to the range of data, LSTM perform best when the data is normalized. I normalized each feature with the minimum and maximum of the training data<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>.</p>
+<p>In addition, I used a sliding window lookback as seen in <span class="citation">(Wei, 2018)</span>. I found through validation that a lookback of 4 hours combined with 8 hidden units had the most success.</p>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>For QQPlot see appendix<a href="2-method.html#fnref1">↩</a></p></li>
+<li id="fn2"><p>This avoids potential bias if the test data impacts the scaling<a href="2-method.html#fnref2">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="1-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3-results.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

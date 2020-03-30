@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>A Appendix | Modelling Altcoin Price Variation with Sentiment Based Predictors</title>
+  <meta name="description" content="A Appendix | Modelling Altcoin Price Variation with Sentiment Based Predictors" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="A Appendix | Modelling Altcoin Price Variation with Sentiment Based Predictors" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Appendix | Modelling Altcoin Price Variation with Sentiment Based Predictors" />
+  
+  
+  
+
+<meta name="author" content="Daniel Spottiswood" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="discussion.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> thesisdowndss::thesis_pdf: default</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="literature-review.html"><a href="literature-review.html"><i class="fa fa-check"></i>Literature Review</a></li>
+<li class="chapter" data-level="2" data-path="2-data.html"><a href="2-data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-data.html"><a href="2-data.html#twitter"><i class="fa fa-check"></i><b>2.1</b> Twitter</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2-data.html"><a href="2-data.html#tweet-removal"><i class="fa fa-check"></i><b>2.1.1</b> Tweet Removal</a></li>
+<li class="chapter" data-level="2.1.2" data-path="2-data.html"><a href="2-data.html#sentiment-analysis"><i class="fa fa-check"></i><b>2.1.2</b> Sentiment Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="2-data.html"><a href="2-data.html#google-search-volume"><i class="fa fa-check"></i><b>2.2</b> Google Search Volume</a></li>
+<li class="chapter" data-level="2.3" data-path="2-data.html"><a href="2-data.html#price-and-volume"><i class="fa fa-check"></i><b>2.3</b> Price and Volume</a></li>
+<li class="chapter" data-level="2.4" data-path="2-data.html"><a href="2-data.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>2.4</b> Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-method.html"><a href="3-method.html"><i class="fa fa-check"></i><b>3</b> Methodology</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-method.html"><a href="3-method.html#log-returns"><i class="fa fa-check"></i><b>3.1</b> Log Returns</a></li>
+<li class="chapter" data-level="3.2" data-path="3-method.html"><a href="3-method.html#xgboost"><i class="fa fa-check"></i><b>3.2</b> XGBoost</a></li>
+<li class="chapter" data-level="3.3" data-path="3-method.html"><a href="3-method.html#long-short-term-memory"><i class="fa fa-check"></i><b>3.3</b> Long Short-Term Memory</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="3-method.html"><a href="3-method.html#layers"><i class="fa fa-check"></i><b>3.3.1</b> Layers</a></li>
+<li class="chapter" data-level="3.3.2" data-path="3-method.html"><a href="3-method.html#dropout"><i class="fa fa-check"></i><b>3.3.2</b> Dropout</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-results.html"><a href="4-results.html"><i class="fa fa-check"></i><b>4</b> Results</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-results.html"><a href="4-results.html#trading-strategies"><i class="fa fa-check"></i><b>4.1</b> Trading Strategies</a></li>
+<li class="chapter" data-level="4.2" data-path="4-results.html"><a href="4-results.html#visualization-of-trades"><i class="fa fa-check"></i><b>4.2</b> Visualization of trades</a></li>
+<li class="chapter" data-level="4.3" data-path="4-results.html"><a href="4-results.html#the-mean-pnls-across-hours"><i class="fa fa-check"></i><b>4.3</b> The mean pnl’s across hours</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i>Discussion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-appendix.html"><a href="A-appendix.html"><i class="fa fa-check"></i><b>A</b> Appendix</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Modelling Altcoin Price Variation with Sentiment Based Predictors</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="appendix" class="section level1">
+<h1><span class="header-section-number">A</span> Appendix</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)</code></pre></div>
+<pre><code>── Attaching packages ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.2.1 ──</code></pre>
+<pre><code>✓ ggplot2 3.2.1     ✓ purrr   0.3.3
+✓ tibble  2.1.3     ✓ dplyr   0.8.3
+✓ tidyr   1.0.0     ✓ stringr 1.4.0
+✓ readr   1.3.1     ✓ forcats 0.4.0</code></pre>
+<pre><code>── Conflicts ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(gridExtra)</code></pre></div>
+<pre><code>
+Attaching package: &#39;gridExtra&#39;</code></pre>
+<pre><code>The following object is masked from &#39;package:dplyr&#39;:
+
+    combine</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;data/final_dataset.csv&#39;</span>, <span class="dt">stringsAsFactors =</span> F)
+long  =<span class="st"> </span>df <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(log_ret1, log_ret4) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(<span class="dt">key =</span> <span class="st">&quot;Lag&quot;</span>, <span class="dt">value =</span> <span class="st">&quot;log_return&quot;</span>, log_ret1,log_ret4)
+p1 =<span class="st"> </span><span class="kw">ggplot</span>(long, <span class="kw">aes</span>(<span class="dt">x=</span>log_return, <span class="dt">fill =</span> Lag)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> .<span class="dv">5</span>) <span class="op">+</span><span class="st"> </span><span class="kw">xlim</span>(<span class="kw">c</span>(<span class="op">-</span>.<span class="dv">1</span>, .<span class="dv">1</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Log Return&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Density&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">scale_fill_discrete</span>(<span class="dt">name =</span> <span class="st">&quot;Lag&quot;</span>, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;1 Hour&quot;</span>, <span class="st">&quot;4 Hours&quot;</span>)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>()
+p1</code></pre></div>
+<pre><code>Warning: Removed 44 rows containing non-finite values (stat_density).</code></pre>
+<p><img src="thesis_files/figure-html/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#p2 = ggplot(long, aes(sample=log_return, color = Lag))+stat_qq()+ stat_qq_line() + ylim(c(-.1,.1)) + #scale_color_discrete(name = &quot;Lag (Hours)&quot;, labels = c(&quot;1&quot;, &quot;2&quot;)) + labs(x=&quot;Sample&quot;, y = &quot;Theoretical&quot;) + #theme_classic()</span></code></pre></div>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="discussion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Visualization of trades | Modelling Altcoin Price Variation with Sentiment Based Predictors</title>
+  <meta name="description" content="Chapter 5 Visualization of trades | Modelling Altcoin Price Variation with Sentiment Based Predictors" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Visualization of trades | Modelling Altcoin Price Variation with Sentiment Based Predictors" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Visualization of trades | Modelling Altcoin Price Variation with Sentiment Based Predictors" />
+  
+  
+  
+
+<meta name="author" content="Daniel Spottiswood" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="4-results.html"/>
+<link rel="next" href="6-the-mean-pnls-across-hours.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> thesisdowndss::thesis_pdf: default</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="literature-review.html"><a href="literature-review.html"><i class="fa fa-check"></i>Literature Review</a></li>
+<li class="chapter" data-level="2" data-path="2-data.html"><a href="2-data.html"><i class="fa fa-check"></i><b>2</b> Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-data.html"><a href="2-data.html#twitter"><i class="fa fa-check"></i><b>2.1</b> Twitter</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2-data.html"><a href="2-data.html#tweet-removal"><i class="fa fa-check"></i><b>2.1.1</b> Tweet Removal</a></li>
+<li class="chapter" data-level="2.1.2" data-path="2-data.html"><a href="2-data.html#sentiment-analysis"><i class="fa fa-check"></i><b>2.1.2</b> Sentiment Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="2-data.html"><a href="2-data.html#google-search-volume"><i class="fa fa-check"></i><b>2.2</b> Google Search Volume</a></li>
+<li class="chapter" data-level="2.3" data-path="2-data.html"><a href="2-data.html#price-and-volume"><i class="fa fa-check"></i><b>2.3</b> Price and Volume</a></li>
+<li class="chapter" data-level="2.4" data-path="2-data.html"><a href="2-data.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>2.4</b> Exploratory Data Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-method.html"><a href="3-method.html"><i class="fa fa-check"></i><b>3</b> Methodology</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-method.html"><a href="3-method.html#log-returns"><i class="fa fa-check"></i><b>3.1</b> Log Returns</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-results.html"><a href="4-results.html"><i class="fa fa-check"></i><b>4</b> Results</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-results.html"><a href="4-results.html#trading-strategies"><i class="fa fa-check"></i><b>4.1</b> Trading Strategies</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-visualization-of-trades.html"><a href="5-visualization-of-trades.html"><i class="fa fa-check"></i><b>5</b> Visualization of trades</a></li>
+<li class="chapter" data-level="6" data-path="6-the-mean-pnls-across-hours.html"><a href="6-the-mean-pnls-across-hours.html"><i class="fa fa-check"></i><b>6</b> The mean pnl’s across hours</a></li>
+<li class="chapter" data-level="" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i>Discussion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-the-first-appendix.html"><a href="A-the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
+<li class="chapter" data-level="B" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Modelling Altcoin Price Variation with Sentiment Based Predictors</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="visualization-of-trades" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Visualization of trades</h1>
+<div class="figure" style="text-align: center"><span id="fig:xgboostTrades"></span>
+<img src="thesis_files/figure-html/xgboostTrades-1.png" alt="XGBoost Predictions and Trades" width="672" />
+<p class="caption">
+Figure 5.1: XGBoost Predictions and Trades
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:lstmTrades"></span>
+<img src="thesis_files/figure-html/lstmTrades-1.png" alt="LSTM Predictions" width="672" />
+<p class="caption">
+Figure 5.2: LSTM Predictions
+</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="4-results.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="6-the-mean-pnls-across-hours.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

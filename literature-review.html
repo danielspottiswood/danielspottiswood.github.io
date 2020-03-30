@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Literature Review | Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors</title>
+  <meta name="description" content="Literature Review | Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Literature Review | Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Literature Review | Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors" />
+  
+  
+  
+
+<meta name="author" content="Daniel Spottiswood" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="1-data.html"/>
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="literature-review.html"><a href="literature-review.html"><i class="fa fa-check"></i>Literature Review</a></li>
+<li class="chapter" data-level="1" data-path="1-data.html"><a href="1-data.html"><i class="fa fa-check"></i><b>1</b> Data</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-data.html"><a href="1-data.html#twitter"><i class="fa fa-check"></i><b>1.1</b> Twitter</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="1-data.html"><a href="1-data.html#tweet-removal"><i class="fa fa-check"></i><b>1.1.1</b> Tweet Removal</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-data.html"><a href="1-data.html#sentiment-analysis"><i class="fa fa-check"></i><b>1.1.2</b> Sentiment Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="1-data.html"><a href="1-data.html#google-search-volume"><i class="fa fa-check"></i><b>1.2</b> Google Search Volume</a></li>
+<li class="chapter" data-level="1.3" data-path="1-data.html"><a href="1-data.html#price-and-volume"><i class="fa fa-check"></i><b>1.3</b> Price and Volume</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-method.html"><a href="2-method.html"><i class="fa fa-check"></i><b>2</b> Methodology</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-method.html"><a href="2-method.html#log-returns"><i class="fa fa-check"></i><b>2.1</b> Log Returns</a></li>
+<li class="chapter" data-level="2.2" data-path="2-method.html"><a href="2-method.html#xgboost"><i class="fa fa-check"></i><b>2.2</b> XGBoost</a></li>
+<li class="chapter" data-level="2.3" data-path="2-method.html"><a href="2-method.html#long-short-term-memory"><i class="fa fa-check"></i><b>2.3</b> Long Short-Term Memory</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-method.html"><a href="2-method.html#layers"><i class="fa fa-check"></i><b>2.3.1</b> Layers</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-method.html"><a href="2-method.html#dropout"><i class="fa fa-check"></i><b>2.3.2</b> Dropout</a></li>
+<li class="chapter" data-level="2.3.3" data-path="2-method.html"><a href="2-method.html#preprocessing"><i class="fa fa-check"></i><b>2.3.3</b> Preprocessing</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-results.html"><a href="3-results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-results.html"><a href="3-results.html#trading-strategies"><i class="fa fa-check"></i><b>3.1</b> Trading Strategies</a></li>
+<li class="chapter" data-level="3.2" data-path="3-results.html"><a href="3-results.html#performance"><i class="fa fa-check"></i><b>3.2</b> Performance</a></li>
+<li class="chapter" data-level="3.3" data-path="3-results.html"><a href="3-results.html#performance-net-fees"><i class="fa fa-check"></i><b>3.3</b> Performance Net Fees</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i>Discussion</a><ul>
+<li class="chapter" data-level="3.4" data-path="discussion.html"><a href="discussion.html#limitations"><i class="fa fa-check"></i><b>3.4</b> Limitations</a></li>
+<li class="chapter" data-level="3.5" data-path="discussion.html"><a href="discussion.html#conclusion"><i class="fa fa-check"></i><b>3.5</b> Conclusion</a></li>
+<li class="chapter" data-level="3.6" data-path="discussion.html"><a href="discussion.html#future-work"><i class="fa fa-check"></i><b>3.6</b> Future Work</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-appendix-a.html"><a href="A-appendix-a.html"><i class="fa fa-check"></i><b>A</b> Appendix A</a><ul>
+<li class="chapter" data-level="A.1" data-path="A-appendix-a.html"><a href="A-appendix-a.html#model-features"><i class="fa fa-check"></i><b>A.1</b> Model Features</a></li>
+<li class="chapter" data-level="A.2" data-path="A-appendix-a.html"><a href="A-appendix-a.html#qq-plot-of-log-returns"><i class="fa fa-check"></i><b>A.2</b> QQ Plot of Log Returns</a></li>
+<li class="chapter" data-level="A.3" data-path="A-appendix-a.html"><a href="A-appendix-a.html#returns-net-fees"><i class="fa fa-check"></i><b>A.3</b> Returns Net Fees</a></li>
+<li class="chapter" data-level="A.4" data-path="A-appendix-a.html"><a href="A-appendix-a.html#correlations"><i class="fa fa-check"></i><b>A.4</b> Correlations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="literature-review" class="section level1 unnumbered">
+<h1>Literature Review</h1>
+<p>Early work demonstrated the predictive power of twitter sentiment on large-cap stocks<span class="citation">(Tushar &amp; Srivastava, 2012)</span>. Oliveira et al. used a Kalman filter to combine twitter sentiment with longer-term popular survey sentiment indicators<span class="citation">(2017)</span>.</p>
+<p>Recently this research has been extended into cryptocurrency, arguably a much better application, with academics demonstrating the predictive power of Twitter sentiment and Wikipedia and Google search volume on cryptocurrency prices. Garcia and Schweitzer provided proof of concept using Twitter sentiment and volume to predict Bitcoin prices<span class="citation">(2015)</span>. They made additional use of technical market features and applied a multi-dimensional model of vector autoregression to achieve a Sharpe ratio of 1.77. They found that higher polarization was correlated with rises in Bitcoin.</p>
+<p>Tianyu Li et al. demonstrated the effectiveness of Twitter sentiment in predicting the altcoin, Zclassic<span class="citation">(Tianyu Li et al., 2019)</span>. They determined that 3 hours was the timeframe over which sentiment is fully absorbed into the price, and after extensive cross-validation, they had the most success using extreme gradient boosting. They made use of an additional feature that more heavily weighted retweets due to their network effect.</p>
+<p>Kim et al. displayed a similar effect with user comments on relevant cryptocurrency online communities, displaying predictive power on both price and volume for several of the largest cryptocurrencies<span class="citation">(2001)</span>. They utilized sets of keywords to determine relatedness to certain concepts in addition to the direction of sentiment.</p>
+<p>ElBahrawy et al. displayed significant theoretical returns on a Wikipedia based trading strategy<span class="citation">(2019)</span>. Kristoufek paired the Wikipedia data with Google trends to develop a multi-feature trading strategy using vector autoregression and vector error-correction<span class="citation">(2013)</span>. He demonstrated that when prices are high increased interest tends to push prices higher, and vice-versa. This behavior may explain both the high volatility and frequencies of bubbles in the crypto space. This work was continued by Alexander Dickerson who used a set of Wikipedia and Google search frequencies to build trading strategies<span class="citation">(2018)</span>. While they appear to be extremely profitable due to testing throughout the bitcoin boom they are not able to adequately predict the subsequent crash. As the cryptocurrency space has experienced many long term swings, it is important that these algorithms are robust enough to remain accurate in the event of novel changes in the dynamics of the market. This is an issue across much of the research in this space as studies often have too small a scope to measure realistic applicability or they predict across the entirety of the cryptocurrency era in which prices, for the most part, have consistently risen. The latter allows models to overfit and display high theoretical profitability.</p>
+<p>Outside of the sentiment/social information space, Wei demonstrated success using solely technical market information and an LSTM neural net<span class="citation">(2018)</span>. Using a sliding window transformation, he exhibited profits while trading on a daily timescale producing an F1 score of almost 60% when making binary predictions.</p>
+<p>It is important to note that while all of this proof of concept research has demonstrated significant profits, few have taken into account transaction fees or the price of liquidity. It is unclear whether these strategies would be profitable if implemented in the real world, although many show high enough returns to infer profitability. The combination of transaction fees and spreads can be in the range of 20 to 100 basis points, therefore profitable strategies require a significant edge per trade. In practice, various tactics can be used to reduce transaction costs of different strategies, but the impact of these tactics will vary by strategy.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="1-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
