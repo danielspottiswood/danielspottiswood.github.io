@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>A Sentiment Based Approach to Predicting Short Term Altcoin Price Variations</title>
-  <meta name="description" content="A Sentiment Based Approach to Predicting Short Term Altcoin Price Variations" />
+  <title>Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors</title>
+  <meta name="description" content="Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="A Sentiment Based Approach to Predicting Short Term Altcoin Price Variations" />
+  <meta property="og:title" content="Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A Sentiment Based Approach to Predicting Short Term Altcoin Price Variations" />
+  <meta name="twitter:title" content="Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors" />
   
   
   
@@ -31,7 +31,17 @@
   
   
 
-<link rel="next" href="1-rmd-basics.html"/>
+<link rel="next" href="literature-review.html"/>
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,43 +61,6 @@
 
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 </head>
 
@@ -103,31 +76,42 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul class="summary">
 <li><a href="./"></a></li>
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="1" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html"><i class="fa fa-check"></i><b>1</b> R Markdown Basics</a><ul>
-<li class="chapter" data-level="1.1" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#lists"><i class="fa fa-check"></i><b>1.1</b> Lists</a></li>
-<li class="chapter" data-level="1.2" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#line-breaks"><i class="fa fa-check"></i><b>1.2</b> Line breaks</a></li>
-<li class="chapter" data-level="1.3" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#r-chunks"><i class="fa fa-check"></i><b>1.3</b> R chunks</a></li>
-<li class="chapter" data-level="1.4" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#inline-code"><i class="fa fa-check"></i><b>1.4</b> Inline code</a></li>
-<li class="chapter" data-level="1.5" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#including-plots"><i class="fa fa-check"></i><b>1.5</b> Including plots</a></li>
-<li class="chapter" data-level="1.6" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#loading-and-exploring-data"><i class="fa fa-check"></i><b>1.6</b> Loading and exploring data</a></li>
-<li class="chapter" data-level="1.7" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#additional-resources"><i class="fa fa-check"></i><b>1.7</b> Additional resources</a></li>
+<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="literature-review.html"><a href="literature-review.html"><i class="fa fa-check"></i>Literature Review</a></li>
+<li class="chapter" data-level="1" data-path="1-data.html"><a href="1-data.html"><i class="fa fa-check"></i><b>1</b> Data</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-data.html"><a href="1-data.html#twitter"><i class="fa fa-check"></i><b>1.1</b> Twitter</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="1-data.html"><a href="1-data.html#tweet-removal"><i class="fa fa-check"></i><b>1.1.1</b> Tweet Removal</a></li>
+<li class="chapter" data-level="1.1.2" data-path="1-data.html"><a href="1-data.html#sentiment-analysis"><i class="fa fa-check"></i><b>1.1.2</b> Sentiment Analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="2-math.html"><a href="2-math.html"><i class="fa fa-check"></i><b>2</b> Math typesetting</a><ul>
-<li class="chapter" data-level="2.1" data-path="2-math.html"><a href="2-math.html#math"><i class="fa fa-check"></i><b>2.1</b> Math</a></li>
+<li class="chapter" data-level="1.2" data-path="1-data.html"><a href="1-data.html#google-search-volume"><i class="fa fa-check"></i><b>1.2</b> Google Search Volume</a></li>
+<li class="chapter" data-level="1.3" data-path="1-data.html"><a href="1-data.html#price-and-volume"><i class="fa fa-check"></i><b>1.3</b> Price and Volume</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="3-ref-labels.html"><a href="3-ref-labels.html"><i class="fa fa-check"></i><b>3</b> Tables, Graphics, References, and Labels</a><ul>
-<li class="chapter" data-level="3.1" data-path="3-ref-labels.html"><a href="3-ref-labels.html#tables"><i class="fa fa-check"></i><b>3.1</b> Tables</a></li>
-<li class="chapter" data-level="3.2" data-path="3-ref-labels.html"><a href="3-ref-labels.html#figures"><i class="fa fa-check"></i><b>3.2</b> Figures</a></li>
-<li class="chapter" data-level="3.3" data-path="3-ref-labels.html"><a href="3-ref-labels.html#footnotes-and-endnotes"><i class="fa fa-check"></i><b>3.3</b> Footnotes and Endnotes</a></li>
-<li class="chapter" data-level="3.4" data-path="3-ref-labels.html"><a href="3-ref-labels.html#bibliographies"><i class="fa fa-check"></i><b>3.4</b> Bibliographies</a></li>
-<li class="chapter" data-level="3.5" data-path="3-ref-labels.html"><a href="3-ref-labels.html#anything-else"><i class="fa fa-check"></i><b>3.5</b> Anything else?</a></li>
+<li class="chapter" data-level="2" data-path="2-method.html"><a href="2-method.html"><i class="fa fa-check"></i><b>2</b> Methodology</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-method.html"><a href="2-method.html#log-returns"><i class="fa fa-check"></i><b>2.1</b> Log Returns</a></li>
+<li class="chapter" data-level="2.2" data-path="2-method.html"><a href="2-method.html#xgboost"><i class="fa fa-check"></i><b>2.2</b> XGBoost</a></li>
+<li class="chapter" data-level="2.3" data-path="2-method.html"><a href="2-method.html#long-short-term-memory"><i class="fa fa-check"></i><b>2.3</b> Long Short-Term Memory</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="2-method.html"><a href="2-method.html#layers"><i class="fa fa-check"></i><b>2.3.1</b> Layers</a></li>
+<li class="chapter" data-level="2.3.2" data-path="2-method.html"><a href="2-method.html#dropout"><i class="fa fa-check"></i><b>2.3.2</b> Dropout</a></li>
+<li class="chapter" data-level="2.3.3" data-path="2-method.html"><a href="2-method.html#preprocessing"><i class="fa fa-check"></i><b>2.3.3</b> Preprocessing</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="4-organization.html"><a href="4-organization.html"><i class="fa fa-check"></i><b>4</b> Organization</a></li>
-<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-results.html"><a href="3-results.html"><i class="fa fa-check"></i><b>3</b> Results</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-results.html"><a href="3-results.html#trading-strategies"><i class="fa fa-check"></i><b>3.1</b> Trading Strategies</a></li>
+<li class="chapter" data-level="3.2" data-path="3-results.html"><a href="3-results.html#performance"><i class="fa fa-check"></i><b>3.2</b> Performance</a></li>
+<li class="chapter" data-level="3.3" data-path="3-results.html"><a href="3-results.html#performance-net-fees"><i class="fa fa-check"></i><b>3.3</b> Performance Net Fees</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="discussion.html"><a href="discussion.html"><i class="fa fa-check"></i>Discussion</a><ul>
+<li class="chapter" data-level="3.4" data-path="discussion.html"><a href="discussion.html#limitations"><i class="fa fa-check"></i><b>3.4</b> Limitations</a></li>
+<li class="chapter" data-level="3.5" data-path="discussion.html"><a href="discussion.html#conclusion"><i class="fa fa-check"></i><b>3.5</b> Conclusion</a></li>
+<li class="chapter" data-level="3.6" data-path="discussion.html"><a href="discussion.html#future-work"><i class="fa fa-check"></i><b>3.6</b> Future Work</a></li>
+</ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="A-the-first-appendix.html"><a href="A-the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
-<li class="chapter" data-level="B" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a></li>
+<li class="chapter" data-level="A" data-path="A-appendix-a.html"><a href="A-appendix-a.html"><i class="fa fa-check"></i><b>A</b> Appendix A</a><ul>
+<li class="chapter" data-level="A.1" data-path="A-appendix-a.html"><a href="A-appendix-a.html#model-features"><i class="fa fa-check"></i><b>A.1</b> Model Features</a></li>
+<li class="chapter" data-level="A.2" data-path="A-appendix-a.html"><a href="A-appendix-a.html#qq-plot-of-log-returns"><i class="fa fa-check"></i><b>A.2</b> QQ Plot of Log Returns</a></li>
+<li class="chapter" data-level="A.3" data-path="A-appendix-a.html"><a href="A-appendix-a.html#returns-net-fees"><i class="fa fa-check"></i><b>A.3</b> Returns Net Fees</a></li>
+<li class="chapter" data-level="A.4" data-path="A-appendix-a.html"><a href="A-appendix-a.html#correlations"><i class="fa fa-check"></i><b>A.4</b> Correlations</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -140,7 +124,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Sentiment Based Approach to Predicting Short Term Altcoin Price Variations</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors</a>
           </h1>
         </div>
 
@@ -149,26 +133,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">A Sentiment Based Approach to Predicting Short Term Altcoin Price Variations</h1>
+<h1 class="title">Algorithmic Trading an Alternative Cryptocurrency Using Sentiment and Volume Based Predictors</h1>
 <p class="author"><em>Daniel Spottiswood</em></p>
-<p class="date"><em>May 2020</em></p>
+<p class="date"><em>April 2020</em></p>
+<div class="abstract">
+<p class="abstract">Abstract</p>
+<p>Social Media and search engines are two of the largest platforms for the dissemination of information. I use Twitter sentiment and Google search volume to predict price fluctuations in the alternative cryptocurrency Zcash. I compare strategies built upon the predictions of two prominent supervised machine learning algorithms: Extreme Gradient Boosted Trees and Long Short-Term Memory. Walk-forward testing demonstrates triple digit returns in less than four months of hourly trading. These results provide novel academic proof of concept that the combination of social media and search volume can be utilized to build profitable trading strategies in the altcoin market.</p>
+</div>
 </div>
 <div id="introduction" class="section level1 unnumbered">
 <h1>Introduction</h1>
-<p>Welcome to the <em>R Markdown</em> thesis template. This template is based on (and in many places copied directly from) the Reed College LaTeX template, but hopefully it will provide a nicer interface for those that have never used TeX or LaTeX before. Using <em>R Markdown</em> will also allow you to easily keep track of your analyses in <strong>R</strong> chunks of code, with the resulting plots and output included as well. The hope is this <em>R Markdown</em> template gets you in the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build onto your results down the road.</p>
-<p>Hopefully, you won’t have much of a learning period to go through and you will reap the benefits of a nicely formatted thesis. The use of LaTeX in combination with <em>Markdown</em> is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file. While you may have never had problems using Word in the past, your thesis is likely going to be about twice as large and complex as anything you’ve written before, taxing Word’s capabilities. After working with <em>Markdown</em> and <strong>R</strong> together for a few weeks, we are confident this will be your reporting style of choice going forward.</p>
-<p><strong>Why use it?</strong></p>
-<p><em>R Markdown</em> creates a simple and straightforward way to interface with the beauty of LaTeX. Packages have been written in <strong>R</strong> to work directly with LaTeX to produce nicely formatting tables and paragraphs. In addition to creating a user friendly interface to LaTeX, <em>R Markdown</em> also allows you to read in your data, to analyze it and to visualize it using <strong>R</strong> functions, and also to provide the documentation and commentary on the results of your project. Further, it allows for <strong>R</strong> results to be passed inline to the commentary of your results. You’ll see more on this later.</p>
-<p>Having your code and commentary all together in one place has a plethora of benefits!</p>
-<p><strong>Who should use it?</strong></p>
-<p>Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about the final appearance of their document should use <em>R Markdown</em>. Of particular use should be anyone in the sciences, but the user-friendly nature of <em>Markdown</em> and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a thesis project.</p>
+<p>Since Bitcoin’s introduction in 2008, Blockchain has been touted as a revolutionary technology capable of rapidly modernizing the entire financial system in part by enabling the spread of cryptocurrencies. While these lofty goals have yet to be realized, the rapid ascension of Bitcoin and many other cryptocurrencies have made many extremely wealthy. Hobbyist investors hoping to replicate these same fortunes, have flocked to cryptocurrencies in search of high volatility investment vehicles with significant upside.</p>
+<p>It is not a stretch to claim that these marketplaces have displayed many characteristics more synonymous with gambling than other regulated financial products. Market manipulation, specifically pump and dump schemes are rampant and relatively unchecked with Reddit and other forums dictating large market movements<span class="citation">(Tao Li, Shin, &amp; Wang, 2019)</span>. A recent study also found strong correlations between cryptocurrency trading and both high risk stock trading and gambling, the latter of which has been shown to succumb to human biases<span class="citation">(Mills &amp; Nower, 2019, <span class="citation">Vernon (2003)</span>)</span>.</p>
+<p>A core feature of cryptocurrency markets is the lack of easily calculable intrinsic value in the underlying products. The value of a cryptocurreny is largely determined by its popularity and usage, leading to a feedback loop as value and popularity build upon each other. Without clear bounds of reasonable valuations, these currencies make large swings often with no underlying changes in the core products or macroeconomic landscape. For the statistically inclined, this has provided an interesting opportunity to attempt to model these seemingly random fluctuations in both price and sentiment. JP Koning describes the problem as attempting to “anticipate what average opinion expects average opinion to be”, no simple task<span class="citation">(2019)</span>.</p>
+<p>While sentiment indicators have been used to predict equities for decades, they seem particularly applicable in the prediction of cryptocurrencies due to their derivation of value. Researchers have shown that forum comments, Wikipedia and Google search volumes, and Twitter comments can be utilized to predict a variety of cryptocurrencies with varying levels of accuracy<span class="citation">(Kristoufek, 2013,<span class="citation">Tianyu Li, Chamrajnagar, Fong, Rizik, &amp; Fu (2019)</span>, <span class="citation">Y. Kim et al. (2001)</span>)</span>. Long short term memory (LSTM) neural nets, extreme gradient boosted trees (XGBoost), and vector autoregression have been shown to have success in this context.</p>
+<p>However, much of the academic research in this space has focused on Bitcoin and the use of a single class of predictors. Many researchers have either shown correlations between predictions and prices or success in binary prediction, but have failed to propose profitable strategies that consistently outperform the market<span class="citation">(Tianyu Li et al., 2019, <span class="citation">Colianni, Rosales, &amp; Signorotti (2015)</span>)</span>.</p>
+<p>In this paper, I predict price movements in altcoin, Zcash. Zcash originated as a fork from the Bitcoin blockchain in 2016 albeit with a different name: Zerocoin protocol. Zcash provides the option for users to shield their identities and amount during a transaction, through zero-knowledge cryptography. Although it has gained recognition through its privacy features, as of May 2018 less than one percent of transactions were fully shielded, supporting the thesis that those trading Zcash are apathetic towards the specifics of the technology<span class="citation">(Floyd, 2018)</span>. I chose Zcash, ticker ZEC, because it has moderately high volume, twenty-second in market capitalization among cryptocurrencies, has stable but developing technology, and has a unique and distinguishable name/ticker.</p>
+<p>I use search volume, buy/sell volume, and twitter text sentiment combined with XGBoost and LSTM Neural nets to predict hourly price movements in Zcash. I propose strategies that are shown, through the use of walk-forward testing, to return over 200 percent net fees in a span of approximately one hundred days. My approach adds to the current state of academic research by utilizing this combination of features to propose strategies that return substantial profits in an altcoin market. Furthermore, these strategies and models operate at the hourly level, whereas previous research has focused on daily returns.</p>
+<p>In Section <a href="1-data.html#data">1</a>, I use advanced methods to estimate tweet sentiment based on hourly data with tweets from suspected bots removed. I normalize Google search volume for Zcash by benchmarking it to the search volume of the largest cryptocurrency, Bitcoin. In section <a href="2-method.html#method">2</a>, I detail the XGBoost and LSTM models I use as well as my decision to regress on log returns. In section <a href="3-results.html#results">3</a> I use walk-forward testing to estimate the theoretical profits of trading strategies based on these predictions. I dig into the models in an attempt to parse out how sentiment and volume may interact to drive price movements in certain situations.</p>
+<p>In conclusion, I discuss what these results may demonstrate regarding market dynamics. I also examine the feasibility of implementation given the current exchange landscape, including liquidity and fees.</p>
 
-<!--
-This is for including Chapter 1.  Notice that it's also good practice to name your chunk.  This will help you debug potential issues as you knit.  The chunk above is called intro and the one below is called chapter1.  Feel free to change the name of the Rmd file as you wish, but don't forget to change it here from chap1.Rmd.
--->
-<!--
-The {#rmd-basics} text after the chapter declaration will allow us to link throughout the document back to the beginning of Chapter 1.  These labels will automatically be generated (if not specified) by changing the spaces to hyphens and capital letters to lowercase.  Look for the reference to this label at the beginning of Chapter 2.
--->
 </div>
             </section>
 
@@ -176,7 +160,7 @@ The {#rmd-basics} text after the chapter declaration will allow us to link throu
         </div>
       </div>
 
-<a href="1-rmd-basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="literature-review.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
